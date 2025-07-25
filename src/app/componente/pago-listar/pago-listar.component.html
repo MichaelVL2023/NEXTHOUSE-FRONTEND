@@ -1,0 +1,68 @@
+<div class="mat-elevation-z8">
+    <table mat-table [dataSource]="dataSource" matSort>
+
+        <!-- idPropiedad Column -->
+        <ng-container matColumnDef="idPago">
+            <th mat-header-cell *matHeaderCellDef> No. Pago </th>
+            <td mat-cell *matCellDef="let element"> {{element.idPago}} </td>
+        </ng-container>
+
+        <!-- fechaPublicacion Column -->
+        <ng-container matColumnDef="fechaTransaccion">
+            <th mat-header-cell *matHeaderCellDef> Fecha Transaccion </th>
+            <td mat-cell *matCellDef="let element"> {{element.fechaTransaccion | date:'dd/MM/yyyy'}} </td>
+        </ng-container>
+
+        <!-- titulo Column -->
+        <ng-container matColumnDef="monto">
+            <th mat-header-cell *matHeaderCellDef> Monto </th>
+            <td mat-cell *matCellDef="let element"> {{element.monto}} </td>
+        </ng-container>
+
+        <!-- ubicacion Column -->
+        <ng-container matColumnDef="reserva">
+            <th mat-header-cell *matHeaderCellDef> Reserva </th>
+            <td mat-cell *matCellDef="let element"> {{element.reserva.estado}} </td>
+        </ng-container>
+
+        <!-- usuario Column -->
+        <ng-container matColumnDef="opcionesPago">
+            <th mat-header-cell *matHeaderCellDef> Opcion Pago </th>
+            <td mat-cell *matCellDef="let element"> {{element.opcionesPago.metodoPago}} </td>
+        </ng-container>
+
+        <!-- accion1 (Update) Column -->
+        <ng-container matColumnDef="accion1">
+            <th mat-header-cell *matHeaderCellDef> Update </th>
+            <td mat-cell *matCellDef="let element">
+                <button mat-raised-button color="primary"
+                        [routerLink]="['/pagos-edit', element.idPago]">
+                    <span class="material-icons">update</span>
+                </button>
+            </td>
+        </ng-container>
+
+        <!-- accion2 (Eliminar) Column -->
+        <ng-container matColumnDef="accion2">
+            <th mat-header-cell *matHeaderCellDef> Delete </th>
+            <td mat-cell *matCellDef="let element">
+                <button mat-raised-button color="warn"
+                        (click)="openDialog(element.idPago)">
+                    <span class="material-icons">delete_sweep</span>
+                </button>
+            </td>
+        </ng-container>
+
+        <!-- Header and Row Definitions -->
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+
+    <!-- Paginación -->
+    <mat-paginator [pageSizeOptions]="[5, 10, 20]"
+                   showFirstLastButtons
+                   aria-label="Select page of periodic elements">
+    </mat-paginator>
+</div>
+
+

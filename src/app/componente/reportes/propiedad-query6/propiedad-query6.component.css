@@ -1,0 +1,73 @@
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.date-selection {
+  margin-bottom: 20px;
+}
+
+.date-selection label {
+  margin-right: 10px;
+}
+
+.date-selection input {
+  margin-right: 20px;
+}
+
+button {
+  background-color: #D0C08C;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 5px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+
+
+}
+
+button:hover {
+  background-color: #D0C08C;
+}
+
+.error-message {
+  color: red;
+  margin-bottom: 10px;
+}
+
+.chart-container {
+  margin-top: 20px;
+}
+
+canvas {
+  max-width: 100%; /* Asegura que el lienzo no exceda el contenedor */
+  height: 400px; /* Ajusta la altura específica */
+  display: block;
+  margin: 0 auto; /* Centra el gráfico dentro del contenedor */
+}
+
+.datepicker-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px; /* Espaciado entre los elementos */
+  margin-bottom: 20px;
+}
+
+.datepicker-container label {
+  margin-right: 10px;
+}
+.title h1 {
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600; /* Increase font-weight */
+  font-size: 2.0em; /* Increase font-size */
+  color: #333;
+}

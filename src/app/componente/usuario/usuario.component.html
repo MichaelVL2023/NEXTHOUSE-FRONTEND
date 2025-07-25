@@ -1,0 +1,37 @@
+<mat-card class="example-card">
+  <mat-card-title style="text-align: center;">Formulario de Usuario</mat-card-title>
+    <mat-card-content>
+      <form [formGroup]="usuarioForm" class="form-container">
+        <mat-form-field appearance="fill">
+          <mat-label>Nombre Completo</mat-label>
+          <input matInput formControlName="nombreCompleto" placeholder="Ingrese su Nombre Completo" />
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+          <mat-label>Email</mat-label>
+          <input matInput formControlName="email" placeholder="Ingrese su email" />
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+          <mat-label>Telefono</mat-label>
+          <input matInput formControlName="telefono" placeholder="Ingrese su telefono" />
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+          <mat-label>Contraseña</mat-label>
+          <input matInput formControlName="contrasena" placeholder="Ingrese su contraseña" type="password"/>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+          <mat-label>Tipo de Rol</mat-label>
+          <mat-select formControlName="rol" [(value)]="idRolSeleccionado" required>
+            <mat-option *ngFor="let a of lista" [value]="a.idRol">
+              {{a.tipoUsuario}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+
+            <button mat-raised-button color = "primary" (click)="onSubmit()">Registrar</button>
+        </form>
+    </mat-card-content>
+</mat-card>

@@ -1,0 +1,197 @@
+.social-media {
+  display: flex; /* Usamos flexbox para alinear los iconos */
+  justify-content: center; /* Centra horizontalmente los iconos */
+  margin-top: 20px; /* Espacio entre el contenido y los iconos */
+}
+
+.social-media a {
+  margin: 0 10px; /* Espacio entre los íconos */
+}
+
+.social-media img {
+  width: 35px; /* Ajusta el tamaño de los íconos */
+  height: 35px; /* Ajusta la altura de los íconos */
+}
+
+.footer-content {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #D0C08C;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  font-size: 14px;
+  color: #333;
+  z-index: 100;
+  text-align: center;
+  position: relative;
+}
+
+.footer-text {
+  text-align: center; /* Centra el texto "Hola" */
+  margin-top: 10px; /* Espacio entre los iconos y el texto */
+  color: rgb(0, 0, 0); /* Color del texto */
+  font-size: 18px; /* Tamaño de fuente del texto */
+  font-family: 'Times New Roman', sans-serif;
+}
+
+.legal-links {
+  text-align: center; /* Centra los enlaces */
+  margin-top: 10px; /* Espacio entre el texto "Hola" y los enlaces */
+  font-family: 'Times New Roman', sans-serif;
+}
+
+.legal-links a {
+  color: rgb(0, 0, 0); /* Color del texto de los enlaces */
+  text-decoration: none; /* Quita el subrayado de los enlaces */
+  margin: 0 10px; /* Espacio entre los enlaces */
+}
+
+.legal-links a:hover {
+  text-decoration: underline; /* Subraya el enlace al pasar el mouse */
+}
+
+.separator {
+  color: black; /* Color negro para el separador */
+  margin: 0 10px; /* Espacio alrededor del separador */
+}
+
+/* Barra de navegación */
+.navbar {
+  background-color: #D0C08C; /* Color de fondo de la barra */
+  position: fixed; /* Fija la barra en la parte superior */
+  top: 0;
+  left: 0;
+  width: 100%; /* Asegura que ocupe todo el ancho de la página */
+  z-index: 10; /* Asegura que la barra quede sobre el contenido */
+  padding: 10px 0; /* Espaciado interno */
+}
+
+.nav-links {
+  display: flex; /* Usamos flexbox para alinear los enlaces */
+  justify-content: center; /* Centra los enlaces */
+  align-items: center; /* Alinea los elementos verticalmente */
+  list-style: none; /* Quita los puntos de la lista */
+  margin: 0; /* Quita los márgenes de la lista */
+  padding: 0; /* Quita el padding de la lista */
+  width: 100%; /* Asegura que ocupe todo el ancho de la página */
+}
+
+/* Alineación del botón "Registrar" a la izquierda */
+.nav-links > .left {
+  position: absolute; /* Lo coloca a la izquierda de la barra */
+  left: 20px; /* Ajusta el espacio desde el borde izquierdo */
+}
+
+/* Los enlaces centrados se mantendrán centrados */
+.nav-links li {
+  margin: 0 20px; /* Espacio entre los elementos */
+}
+
+/* Estilo para el separador */
+.separator {
+  color: black; /* Color del separador */
+  font-size: 24px; /* Tamaño del separador */
+  margin: 0 15px; /* Espaciado alrededor del separador */
+}
+
+/* Estilos para los enlaces */
+.nav-links a {
+  color: black; /* Color de los enlaces */
+  text-decoration: none; /* Elimina el subrayado */
+  font-size: 18px; /* Tamaño de fuente */
+  font-weight: bold; /* Texto en negrita */
+  transition: color 0.3s ease; /* Efecto de transición al pasar el mouse */
+}
+
+/* Efecto de hover para los enlaces */
+.nav-links a:hover {
+  color: #967145; /* Cambia el color al pasar el mouse */
+}
+
+/* Estilos para el botón "Registrar" y el dropdown */
+.left {
+  position: relative; /* Necesario para posicionar el dropdown */
+}
+
+/* Estilos para el botón "Registrar" */
+.dropdown-btn {
+  background-color: #967145; /* Color de fondo */
+  color: black; /* Color del texto */
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 10px 20px;
+  border-radius: 5px; /* Bordes redondeados */
+  text-align: center; /* Asegura que el texto dentro del botón esté centrado */
+  transition: background-color 0.3s ease, transform 0.1s ease; /* Transición suave para color y efecto de presión */
+  display: inline-flex; /* Alineación flexible */
+  align-items: center; /* Centra el texto verticalmente */
+  justify-content: center; /* Centra el texto horizontalmente */
+}
+
+/* Efecto de hover para cambiar el color del botón */
+.dropdown-btn:hover {
+  background-color: #ebdfb9; /* Cambio de color al pasar el ratón */
+}
+
+/* Efecto cuando se hace clic (botón presionado) */
+.dropdown-btn:active {
+  background-color: #7a5b38; /* Hace que el botón se oscurezca al hacer clic */
+  border-color: #7a5b38; /* Mantiene el borde oscuro cuando se presiona */
+  transform: scale(0.98); /* Efecto de "presionar" el botón, ligeramente más pequeño */
+}
+
+/* Estilos para el menú desplegable */
+.dropdown-content {
+  display: none; /* Esconde el menú por defecto */
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #dda769;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  padding: 0; /* Asegura que el menú no tenga espacio extra */
+  list-style: none; /* Quita los puntos del menú */
+  border: 2px solid black; /* Borde negro de 2px */
+}
+
+/* Estilo para los elementos del menú */
+.dropdown-content li {
+  padding: 10px 20px;
+  text-align: center; /* Centra el texto dentro de cada opción del menú */
+}
+
+.dropdown-content a {
+  color: black;
+  text-decoration: none;
+  display: inline-block; /* Cambio a inline-block para ajustar el ancho */
+  font-size: 16px;
+  position: relative; /* Necesario para posicionar el pseudo-elemento */
+  padding: 5px 0; /* Espacio extra para que la línea no esté pegada al texto */
+}
+
+.dropdown-content a::after {
+  content: ''; /* Necesario para mostrar el pseudo-elemento */
+  position: absolute;
+  left: 50%; /* Empieza en el centro */
+  bottom: 0;
+  width: 0; /* Inicialmente no tiene ancho */
+  height: 2px; /* Grosor de la línea */
+  background-color: black; /* Color de la línea */
+  transition: width 0.3s ease, left 0.3s ease; /* Transición para el efecto de expansión */
+  transform: translateX(-50%); /* Centra la línea en relación con el texto */
+}
+
+/* Efecto cuando el ratón pasa sobre el enlace */
+.dropdown-content a:hover::after {
+  width: 100%; /* La línea se expande completamente */
+  left: 50%; /* Deja la línea centrada mientras se expande */
+  transform: translateX(-50%) scaleX(1); /* Asegura que la línea se expanda simétricamente */
+}
+
+/* Mostrar el dropdown cuando el botón es presionado */
+.left:hover .dropdown-content {
+  display: block;
+}

@@ -1,0 +1,264 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+h1 {
+  font-size: 40px; /* Ajusta según tu preferencia */
+  color: #D0C08C; /* Color mostaza */
+  font-family: 'Times New Roman', sans-serif;
+}
+
+h2 {
+  font-size: 40px; /* Ajusta según tu preferencia */
+  font-family: 'Times New Roman', sans-serif;
+  color: #D0C08C; /* Color mostaza */
+}
+
+h3 {
+  font-size: 40px; /* Ajusta según tu preferencia */
+  font-family: 'Times New Roman', sans-serif;
+  color: #D0C08C; /* Color mostaza */
+}
+
+h4 {
+  font-size: 40px; /* Ajusta según tu preferencia */
+  margin-top: 20px;
+  font-family: 'Times New Roman', sans-serif;
+  color: #D0C08C; /* Color mostaza */
+}
+
+h5 {
+  font-size: 40px; /* Ajusta según tu preferencia */
+  margin-top: 20px;
+  font-family: 'Times New Roman', sans-serif;
+  color: #D0C08C; /* Color mostaza */
+}
+
+h6 {
+  margin-top: 20px;
+  font-size: 40px; /* Ajusta según tu preferencia */
+  font-family: 'Times New Roman', sans-serif;
+  color: #D0C08C; /* Color mostaza */
+}
+
+iframe {
+  margin-top: -50px;  /* Ajusta el margen superior del video */
+}
+
+.background {
+  position: fixed; /* Permite que el fondo cubra toda la pantalla */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover; /* Asegura que la imagen cubra todo el fondo */
+  background-position: center; /* Centra la imagen */
+  filter: blur(8px); /* Aplica el efecto de difuminación */
+  z-index: -1; /* Asegura que el fondo esté detrás del contenido */
+}
+
+.background::after {
+  content: ""; /* Necesario para crear un pseudo-elemento */
+  position: absolute; /* Permite que se posicione sobre el fondo */
+  bottom: 0; /* Alineado a la parte inferior */
+  left: 0;
+  width: 100%;
+  height: 50%; /* Ajusta la altura del degradado según sea necesario */
+  background: linear-gradient(to top, rgba(150, 130, 69, 0.8), rgba(150, 130, 69, 0)); /* Degradado de blanco a transparente */
+  z-index: 1; /* Asegura que el degradado esté por encima del fondo difuminado */
+}
+
+.content {
+  position: relative; /* Para que el contenido se posicione por encima del fondo */
+  z-index: 2; /* Asegura que el contenido esté por encima */
+  color: black; /* Color del texto */
+  padding: 20px; /* Espaciado alrededor del contenido */
+  text-align: center; /* Centra el texto */
+  padding-top: 50px; /* Agrega espacio en la parte superior para que no quede pegado a la barra de navegación */
+  font-family: 'Times New Roman', sans-serif;
+
+}
+
+.container {
+  display: flex; /* Usamos flexbox para alinear los contenedores en una fila horizontal */
+  justify-content: space-around; /* Espacia los contenedores de manera uniforme */
+  align-items: flex-start; /* Alinea los elementos en la parte superior */
+  margin-top: 20px; /* Espacio entre las secciones */
+
+}
+
+.container1 {
+  display: flex; /* Usamos flexbox para alinear el título y el cuadro */
+  flex-direction: column; /* Mantiene los elementos en columna */
+  align-items: center; /* Centra el contenido horizontalmente */
+  margin: 0 20px; /* Espacio entre los contenedores */
+  max-width: 300px; /* Limita el ancho de cada contenedor si es necesario */
+}
+
+.container2 {
+  display: flex; /* Usamos flexbox para alinear el título y el cuadro */
+  flex-direction: column; /* Mantiene los elementos en columna */
+  align-items: center; /* Centra el contenido horizontalmente */
+  margin: 0 20px; /* Espacio entre los contenedores */
+  max-width: 300px; /* Limita el ancho de cada contenedor si es necesario */
+}
+
+.container3 {
+  display: flex; /* Usamos flexbox para alinear el título y el cuadro */
+  flex-direction: column; /* Mantiene los elementos en columna */
+  align-items: center; /* Centra el contenido horizontalmente */
+  margin: 0 20px; /* Espacio entre los contenedores */
+  max-width: 300px; /* Limita el ancho de cada contenedor si es necesario */
+}
+
+.rounded-box1 {
+  background-color: #D0C08C; /* Color de fondo */
+  color: saddlebrown;
+  padding: 30px; /* Espacio interno */
+  border-radius: 15px; /* Bordes redondeados */
+  width: 100%; /* Ajusta el ancho al 100% del contenedor */
+  min-height: 200px; /* Establece una altura mínima para todos los cuadros */
+  box-sizing: border-box; /* Incluye padding y border en el total width y height */
+  display: flex; /* Usamos flexbox */
+  flex-direction: column; /* Permite alinear el contenido verticalmente */
+  justify-content: center; /* Centra el contenido verticalmente */
+  align-items: center; /* Centra el contenido horizontalmente */
+  text-align: center; /* Asegura que el texto esté centrado */
+  display: inline; /* Asegura que el texto en negrita se mantenga en línea */
+  font-size: 18px; /* Ajusta según tu preferencia */
+  font-family: 'Times New Roman', sans-serif;
+}
+
+.rounded-box2 {
+  background-color: #D0C08C; /* Color de fondo */
+  color: saddlebrown;
+  padding: 30px; /* Espacio interno */
+  border-radius: 15px; /* Bordes redondeados */
+  width: 100%; /* Ajusta el ancho al 100% del contenedor */
+  min-height: 200px; /* Establece una altura mínima para todos los cuadros */
+  box-sizing: border-box; /* Incluye padding y border en el total width y height */
+  display: flex; /* Usamos flexbox */
+  flex-direction: column; /* Permite alinear el contenido verticalmente */
+  justify-content: center; /* Centra el contenido verticalmente */
+  align-items: center; /* Centra el contenido horizontalmente */
+  text-align: center; /* Asegura que el texto esté centrado */
+  font-size: 18px; /* Ajusta según tu preferencia */
+  font-family: 'Times New Roman', sans-serif;
+
+}
+.rounded-box3 {
+  background-color: #D0C08C; /* Color de fondo */
+  color: saddlebrown;
+  padding: 30px; /* Espacio interno */
+  border-radius: 15px; /* Bordes redondeados */
+  width: 100%; /* Ajusta el ancho al 100% del contenedor */
+  min-height: 200px; /* Establece una altura mínima para todos los cuadros */
+  box-sizing: border-box; /* Incluye padding y border en el total width y height */
+  display: flex; /* Usamos flexbox */
+  flex-direction: column; /* Permite alinear el contenido verticalmente */
+  justify-content: center; /* Centra el contenido verticalmente */
+  align-items: center; /* Centra el contenido horizontalmente */
+  text-align: center; /* Asegura que el texto esté centrado */
+  display: inline; /* Asegura que el texto en negrita se mantenga en línea */
+  font-size: 18px; /* Ajusta según tu preferencia */
+  font-family: 'Times New Roman', sans-serif;
+}
+
+.rounded-box4 {
+  background-color: #D0C08C; /* Color de fondo */
+  color: saddlebrown;
+  padding: 30px; /* Espacio interno */
+  border-radius: 15px; /* Bordes redondeados */
+  margin-right: 10px; /* Espacio entre el cuadro y el texto */
+  width: 600px; /* Ajusta el ancho como desees */
+  font-size: 20px; /* Ajusta según tu preferencia */
+}
+
+.history1 {
+  color: saddlebrown; /* Color del texto */
+  font-size: 20px; /* Tamaño de fuente */
+  margin-bottom: 10px; /* Espacio entre el título y el cuadro */
+  text-align: center; /* Centra el texto del título */
+  font-size: 18px; /* Ajusta según tu preferencia */
+  font-size: 30px;
+}
+
+.history2 {
+  color: saddlebrown; /* Color del texto */
+  font-size: 20px; /* Tamaño de fuente */
+  margin-bottom: 10px; /* Espacio entre el título y el cuadro */
+  text-align: center; /* Centra el texto del título */
+  font-size: 18px; /* Ajusta según tu preferencia */
+  font-size: 30px;
+  font-family: 'Times New Roman', sans-serif;
+}
+
+.history3 {
+  color: saddlebrown; /* Color del texto */
+  font-size: 20px; /* Tamaño de fuente */
+  margin-bottom: 10px; /* Espacio entre el título y el cuadro */
+  text-align: center; /* Centra el texto del título */
+  font-size: 18px; /* Ajusta según tu preferencia */
+  font-size: 30px;
+  font-family: 'Times New Roman', sans-serif;
+}
+
+.history4 {
+  color: saddlebrown; /* Color del texto */
+  font-size: 18px; /* Tamaño de fuente */
+  margin-left: 10px; /* Espacio entre el cuadro y el texto */
+  font-family: 'Times New Roman', sans-serif;
+}
+
+.reasons-container {
+  display: flex; /* Usamos flexbox para alinear los cuadros */
+  flex-wrap: wrap; /* Permite que los cuadros se ajusten en varias filas si es necesario */
+  justify-content: center; /* Centra los cuadros horizontalmente */
+  margin-top: 20px; /* Espacio entre el título y los cuadros */
+  font-family: 'Times New Roman', sans-serif;
+}
+
+.reason-box {
+  background-color: #D0C08C; /* Color de fondo */
+  color: saddlebrown;
+  padding: 20px; /* Espacio interno */
+  border-radius: 15px; /* Bordes redondeados */
+  width: 200px; /* Ancho de cada cuadro */
+  text-align: center; /* Centra el texto dentro del cuadro */
+  margin: 10px; /* Margen entre los cuadros */
+  font-family: 'Times New Roman', sans-serif;
+  font-size: 18px; /* Ajusta según tu preferencia */
+}
+
+.contact-container {
+  display: flex; /* Usamos flexbox para centrar el contenido */
+  justify-content: center; /* Centra horizontalmente el contenido */
+  margin-top: 20px; /* Espacio entre el título y el cuadro */
+}
+
+.team-container {
+  display: flex; /* Usamos flexbox para alinear los miembros del equipo */
+  justify-content: center; /* Espacio entre los cuadros */
+  margin-top: 20px; /* Espacio entre el título y los cuadros */
+}
+
+.team-member {
+  color: saddlebrown;
+  padding: 20px; /* Espacio interno */
+  border-radius: 15px; /* Bordes redondeados */
+  width: calc(20% - 10px); /* Ancho de cada cuadro */
+  text-align: center; /* Centra el texto dentro del cuadro */
+  margin: 5px; /* Margen entre los cuadros */
+  font-family: "Times New Roman", sans-serif;
+  font-size: 15px;
+}
+
+.team-member img {
+  width: 200px; /* Ajusta el ancho de la imagen */
+  height: 200px; /* Ajusta la altura de la imagen para que sea uniforme */
+  object-fit: cover; /* Asegura que la imagen cubra el área sin distorsionarse */
+  border-radius: 50%; /* Hace que la imagen sea redonda */
+  margin-bottom: 10px; /* Espacio entre la imagen y el texto */
+}

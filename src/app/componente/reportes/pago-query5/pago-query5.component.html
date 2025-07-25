@@ -1,0 +1,32 @@
+<div class="title" xmlns="http://www.w3.org/1999/html">
+  <h1>Reporte de Pagos</h1>
+
+  <!-- Selección de rango de fechas -->
+  <div class = "datepicker-container">
+  <mat-form-field appearance="fill">
+    <mat-label>Fecha de Inicio</mat-label>
+    <input matInput [matDatepicker]="startPicker" [(ngModel)]="startDate"/>
+    <mat-datepicker-toggle matSuffix [for]="startPicker"></mat-datepicker-toggle>
+    <mat-datepicker #startPicker></mat-datepicker>
+  </mat-form-field>
+
+    <mat-form-field appearance="fill">
+    <mat-label>Fecha de Fin</mat-label>
+    <input matInput [matDatepicker]="endPicker" [(ngModel)]="endDate"/>
+    <mat-datepicker-toggle matSuffix [for]="endPicker"></mat-datepicker-toggle>
+    <mat-datepicker #endPicker></mat-datepicker>
+  </mat-form-field>
+</div>
+
+  <!-- Botón para generar el gráfico -->
+  <button (click)="generateChart()">Generar Reporte</button>
+
+  <!-- Mensaje de error -->
+  <p *ngIf="errorMessage" style="color: red;">{{ errorMessage }}</p>
+
+  <!-- Canvas para el gráfico -->
+  <br>
+  <div>
+    <canvas id="chartCanvas"></canvas>
+  </div>
+</div>

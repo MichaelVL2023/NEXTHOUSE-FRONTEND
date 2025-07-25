@@ -1,0 +1,41 @@
+<div class="container">
+  <img src="assets/images/imagen1.png" alt="Imagen" class="imagen-centrada">
+</div>
+<img src="assets/images/fondo1.jpg" alt="Imagen" class="imagen-fondo">
+<hr class="division">
+
+<div class="botones">
+  <button class="boton" (click)="onSelectType('casa')">
+    <img src="assets/images/casa.png" alt="Casa">
+    <span>Casa</span>
+  </button>
+  <button class="boton" (click)="onSelectType('hoteles')">
+    <img src="assets/images/hoteles.png" alt="Hoteles">
+    <span>Hoteles</span>
+  </button>
+  <button class="boton" (click)="onSelectType('habitaciones')">
+    <img src="assets/images/habitaciones.png" alt="Habitaciones">
+    <span>Habitaciones</span>
+  </button>
+  <button class="boton" (click)="onSelectType('piscinas')">
+    <img src="assets/images/piscinas.png" alt="Piscinas">
+    <span>Piscinas</span>
+  </button>
+  <button class="boton" (click)="onSelectType('vinedos')">
+    <img src="assets/images/vinedos.png" alt="Viñedos">
+    <span>Viñedos</span>
+  </button>
+  <button class="boton" (click)="onSelectType('cabanas')">
+    <img src="assets/images/cabanas.png" alt="Cabañas">
+    <span>Cabañas</span>
+  </button>
+</div>
+
+<div class="imagenes-container">
+  <div *ngFor="let info of selectedItems" class="imagen-item">
+    <img [src]="info.src" [alt]="info.location" class="imagen-redondeada">
+    <span>{{ info.location }} <span class="estrella">{{ info.rating }}</span></span>
+    <span>{{ info.date }}</span>
+    <span>{{ info.price }}</span>
+  </div>
+</div>

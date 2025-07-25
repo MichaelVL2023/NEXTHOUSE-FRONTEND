@@ -1,0 +1,85 @@
+.example-card {
+  margin: 0 auto;
+  width: 500px;
+}
+
+
+.welcome-section {
+  max-width: 40%;
+  display: flex;
+}
+
+.welcome-section h1 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+.welcome-section p {
+  font-size: 1.1rem;
+  margin-top: 10px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.logoingreso {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.login-card {
+  max-width: 50%;
+  display: flex;
+  max-width: 430px;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 8px;
+}
+
+.login-card mat-card-title {
+  font-size: 1.5rem;
+  text-align: center;
+  color: #333;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+
+.terms {
+  font-size: 0.8rem;
+  text-align: center;
+  margin-top: 20px;
+  color: #555;
+}
+
+.terms a {
+  color: red;
+  text-decoration: none;
+}
+
+.imagen-fondo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+  opacity: 1.0; /* Ajusta la opacidad para que el texto sea legible */
+}
+
+.imagen-centrada {
+  max-width: 60%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}

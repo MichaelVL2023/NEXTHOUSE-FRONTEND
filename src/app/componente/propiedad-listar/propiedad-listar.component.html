@@ -1,0 +1,97 @@
+<div class="mat-elevation-z8">
+    <table mat-table [dataSource]="dataSource" matSort>
+
+        <!-- idPropiedad Column -->
+        <ng-container matColumnDef="idPropiedad">
+            <th mat-header-cell *matHeaderCellDef> No. Propiedad </th>
+            <td mat-cell *matCellDef="let element"> {{element.idPropiedad}} </td>
+        </ng-container>
+
+        <!-- titulo Column -->
+        <ng-container matColumnDef="titulo">
+            <th mat-header-cell *matHeaderCellDef> Titulo </th>
+            <td mat-cell *matCellDef="let element"> {{element.titulo}} </td>
+        </ng-container>
+
+        <!-- descripcion Column -->
+        <ng-container matColumnDef="descripcion">
+            <th mat-header-cell *matHeaderCellDef> Descripción </th>
+            <td mat-cell *matCellDef="let element"> {{element.descripcion}} </td>
+        </ng-container>
+
+        <!-- precio Column -->
+        <ng-container matColumnDef="precio">
+            <th mat-header-cell *matHeaderCellDef> Precio </th>
+            <td mat-cell *matCellDef="let element"> {{element.precio}} </td>
+        </ng-container>
+
+        <!-- tipo Column -->
+        <ng-container matColumnDef="tipo">
+            <th mat-header-cell *matHeaderCellDef> Tipo </th>
+            <td mat-cell *matCellDef="let element"> {{element.tipo}} </td>
+        </ng-container>
+
+        <!-- estado Column -->
+        <ng-container matColumnDef="estado">
+            <th mat-header-cell *matHeaderCellDef> Estado </th>
+            <td mat-cell *matCellDef="let element"> {{element.estado}} </td>
+        </ng-container>
+
+        <!-- fechaPublicacion Column -->
+        <ng-container matColumnDef="fechaPublicacion">
+            <th mat-header-cell *matHeaderCellDef> Fecha Publicación </th>
+            <td mat-cell *matCellDef="let element"> {{element.fechaPublicacion | date:'dd/MM/yyyy'}} </td>
+        </ng-container>
+
+        <!-- descripcionUsuario Column -->
+        <ng-container matColumnDef="descripcionUsuario">
+            <th mat-header-cell *matHeaderCellDef> Descripción Usuario </th>
+            <td mat-cell *matCellDef="let element"> {{element.descripcionUsuario}} </td>
+        </ng-container>
+
+        <!-- ubicacion Column -->
+        <ng-container matColumnDef="ubicacion">
+            <th mat-header-cell *matHeaderCellDef> Ubicación </th>
+            <td mat-cell *matCellDef="let element"> {{element.ubicacion.direccion}} </td>
+        </ng-container>
+
+        <!-- usuario Column -->
+        <ng-container matColumnDef="usuario">
+            <th mat-header-cell *matHeaderCellDef> Usuario </th>
+            <td mat-cell *matCellDef="let element"> {{element.usuario.nombreCompleto}} </td>
+        </ng-container>
+
+        <!-- accion1 (Update) Column -->
+        <ng-container matColumnDef="accion1">
+            <th mat-header-cell *matHeaderCellDef> Update </th>
+            <td mat-cell *matCellDef="let element">
+                <button mat-raised-button color="primary"
+                        [routerLink]="['/propiedades-edit', element.idPropiedad]">
+                    <span class="material-icons">update</span>
+                </button>
+            </td>
+        </ng-container>
+
+        <!-- accion2 (Eliminar) Column -->
+        <ng-container matColumnDef="accion2">
+            <th mat-header-cell *matHeaderCellDef> Delete </th>
+            <td mat-cell *matCellDef="let element">
+                <button mat-raised-button color="warn"
+                        (click)="openDialog(element.idPropiedad)">
+                    <span class="material-icons">delete_sweep</span>
+                </button>
+            </td>
+        </ng-container>
+
+        <!-- Header and Row Definitions -->
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+
+    <!-- Paginación -->
+    <mat-paginator [pageSizeOptions]="[5, 10, 20]"
+                   showFirstLastButtons
+                   aria-label="Select page of periodic elements">
+    </mat-paginator>
+</div>
+

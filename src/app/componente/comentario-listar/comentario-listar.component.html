@@ -1,0 +1,81 @@
+<div class="mat-elevation-z8">
+    <table mat-table [dataSource]="dataSource" matSort>
+
+        <!-- idPropiedad Column -->
+        <ng-container matColumnDef="idComentario">
+            <th mat-header-cell *matHeaderCellDef> No. Comentario </th>
+            <td mat-cell *matCellDef="let element"> {{element.idComentario}} </td>
+        </ng-container>
+
+        <!-- titulo Column -->
+        <ng-container matColumnDef="calificacion">
+            <th mat-header-cell *matHeaderCellDef> Calificacion </th>
+            <td mat-cell *matCellDef="let element"> {{element.calificacion}} </td>
+        </ng-container>
+
+        <!-- descripcion Column -->
+        <ng-container matColumnDef="tipoUsuario">
+            <th mat-header-cell *matHeaderCellDef> Tipo Usuario </th>
+            <td mat-cell *matCellDef="let element"> {{element.tipoUsuario}} </td>
+        </ng-container>
+
+        <!-- fechaPublicacion Column -->
+        <ng-container matColumnDef="fechaComentario">
+            <th mat-header-cell *matHeaderCellDef> Fecha Comentario </th>
+            <td mat-cell *matCellDef="let element"> {{element.fechaComentario | date:'dd/MM/yyyy'}} </td>
+        </ng-container>
+
+        <!-- descripcionUsuario Column -->
+        <ng-container matColumnDef="comentario">
+            <th mat-header-cell *matHeaderCellDef> Comentario </th>
+            <td mat-cell *matCellDef="let element"> {{element.comentario}} </td>
+        </ng-container>
+
+
+        <!-- ubicacion Column -->
+        <ng-container matColumnDef="propiedad">
+            <th mat-header-cell *matHeaderCellDef> Propiedad </th>
+            <td mat-cell *matCellDef="let element"> {{element.propiedad.estado}} </td>
+        </ng-container>
+
+        <!-- usuario Column -->
+        <ng-container matColumnDef="usuario">
+            <th mat-header-cell *matHeaderCellDef> Usuario </th>
+            <td mat-cell *matCellDef="let element"> {{element.usuario.nombreCompleto}} </td>
+        </ng-container>
+
+        <!-- accion1 (Update) Column -->
+        <ng-container matColumnDef="accion1">
+            <th mat-header-cell *matHeaderCellDef> Update </th>
+            <td mat-cell *matCellDef="let element">
+                <button mat-raised-button color="primary"
+                        [routerLink]="['/comentarios-edit', element.idComentario]">
+                    <span class="material-icons">update</span>
+                </button>
+            </td>
+        </ng-container>
+
+        <!-- accion2 (Eliminar) Column -->
+        <ng-container matColumnDef="accion2">
+            <th mat-header-cell *matHeaderCellDef> Delete </th>
+            <td mat-cell *matCellDef="let element">
+                <button mat-raised-button color="warn"
+                        (click)="openDialog(element.idComentario)">
+                    <span class="material-icons">delete_sweep</span>
+                </button>
+            </td>
+        </ng-container>
+
+        <!-- Header and Row Definitions -->
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+
+    <!-- Paginación -->
+    <mat-paginator [pageSizeOptions]="[5, 10, 20]"
+                   showFirstLastButtons
+                   aria-label="Select page of periodic elements">
+    </mat-paginator>
+</div>
+
+

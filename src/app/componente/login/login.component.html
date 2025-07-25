@@ -1,0 +1,24 @@
+<div class="logoingreso">
+  <mat-card class="login-card">
+    <img src="assets/images/imagen1.png" alt="Imagen" class="imagen-centrada">
+    <img src="assets/images/fondo.jpg" alt="Imagen" class="imagen-fondo">
+    <mat-card-content>
+      <form [formGroup]="loginForm" class="form-container">
+        <mat-form-field appearance="fill">
+          <mat-label>Email Address</mat-label>
+          <input matInput formControlName="email" placeholder="ejemplo@gmail.com" class="input-estilo" />
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+          <mat-label>Password</mat-label>
+          <input matInput type="password" formControlName="contrasena" placeholder="******" />
+        </mat-form-field>
+
+        <mat-checkbox formControlName="rememberMe">Remember Me</mat-checkbox>
+
+        <button mat-raised-button color="primary" class="login-button" (click)="onSubmit()">Sign in now</button>
+      </form>
+      <p class="terms">By clicking on "Sign in now" you agree to our <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.</p>
+    </mat-card-content>
+  </mat-card>
+</div>

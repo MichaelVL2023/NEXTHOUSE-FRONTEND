@@ -1,0 +1,44 @@
+<mat-card class="example-card">
+    <mat-card-title>Formulario de Pago</mat-card-title>
+    <mat-card-content>
+        <form [formGroup]="pagoForm" class="form-container">
+
+            <mat-form-field appearance="fill">
+                <mat-label>Fecha Transaccion</mat-label>
+                <input matInput [matDatepicker]="picker" formControlName="fechaTransaccion"
+                       placeholder="Seleccione su fecha de Transaccion" />
+                <mat-hint>DD/MM/YYYY</mat-hint>
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+
+
+            <mat-form-field appearance="fill">
+                <mat-label>Monto</mat-label>
+                <input matInput formControlName="monto" placeholder="Ingrese el Monto" />
+            </mat-form-field>
+
+
+            <mat-form-field appearance="fill">
+                <mat-label>Reserva</mat-label>
+                <mat-select formControlName="reserva" [(value)]="idReservaAlquilerSeleccionado" required>
+                    <mat-option *ngFor="let a of listaReservaAlquiler" [value]="a.idReserva">
+                        {{a.estado}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+
+            <mat-form-field appearance="fill">
+                <mat-label>Opcion de Pago</mat-label>
+                <mat-select formControlName="opcionesPago" [(value)]="idOpcionesPagoSeleccionado" required>
+                    <mat-option *ngFor="let a of listOpcionesPago" [value]="a.idOppago">
+                        {{a.metodoPago}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+
+            <button mat-raised-button color="primary" (click)="onSubmit()">Registrar</button>
+        </form>
+    </mat-card-content>
+</mat-card>
+

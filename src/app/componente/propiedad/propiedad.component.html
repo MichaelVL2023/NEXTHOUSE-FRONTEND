@@ -1,0 +1,75 @@
+<mat-card class="example-card">
+    <mat-card-title>Formulario de Propiedad</mat-card-title>
+    <mat-card-content>
+        <form [formGroup]="propiedadForm" class="form-container">
+
+            <mat-form-field appearance="fill">
+                <mat-label>Título</mat-label>
+                <input matInput formControlName="titulo" placeholder="Ingrese el título de la propiedad" />
+            </mat-form-field>
+
+            <mat-form-field appearance="fill">
+                <mat-label>Descripción</mat-label>
+                <textarea matInput formControlName="descripcion" placeholder="Ingrese una descripción"></textarea>
+            </mat-form-field>
+
+            <mat-form-field appearance="fill">
+                <mat-label>Precio</mat-label>
+                <input matInput type="number" formControlName="precio" placeholder="Ingrese el precio" />
+            </mat-form-field>
+
+            <mat-form-field appearance="fill">
+            <mat-label>Tipo</mat-label>
+            <mat-select formControlName="tipo" placeholder="Seleccione el tipo">
+                <mat-option value="Casa">Casa</mat-option>
+                <mat-option value="Departamento">Departamento</mat-option>
+                <mat-option value="Hoteles">Hoteles</mat-option>
+                <mat-option value="Habitaciones">Habitaciones</mat-option>
+                <mat-option value="Piscinas">Piscinas</mat-option>
+                <mat-option value="Viñedos">Viñedos</mat-option>
+                <mat-option value="Cabañas">Cabañas</mat-option>
+            </mat-select>
+        </mat-form-field>
+
+            <mat-form-field appearance="fill">
+                <mat-label>Estado</mat-label>
+                <input matInput formControlName="estado" placeholder="Ingrese el estado " />
+            </mat-form-field>
+
+            <mat-form-field appearance="fill">
+                <mat-label>Fecha Publicacion</mat-label>
+                <input matInput [matDatepicker]="picker" formControlName="fechaPublicacion"
+                       placeholder="Seleccione su fecha de Publicacion" />
+                <mat-hint>DD/MM/YYYY</mat-hint>
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+
+            <mat-form-field appearance="fill">
+                <mat-label>Descripcion de Usuario</mat-label>
+                <input matInput formControlName="descripcionUsuario" placeholder="Ingrese su descripcion como Usuario " />
+            </mat-form-field>
+
+            <mat-form-field appearance="fill">
+                <mat-label>Usuario</mat-label>
+                <mat-select formControlName="usuario" [(value)]="idUsuarioSeleccionado" required>
+                    <mat-option *ngFor="let a of listaUsuario" [value]="a.idUsuario">
+                        {{a.nombreCompleto}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+
+            <mat-form-field appearance="fill">
+                <mat-label>Ubicacion</mat-label>
+                <mat-select formControlName="ubicacion" [(value)]="idUbicacionSeleccionado" required>
+                    <mat-option *ngFor="let a of listUbicacion" [value]="a.idUbicacion">
+                        {{a.direccion}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+
+            <button mat-raised-button color="primary" (click)="onSubmit()">Registrar</button>
+        </form>
+    </mat-card-content>
+</mat-card>
+

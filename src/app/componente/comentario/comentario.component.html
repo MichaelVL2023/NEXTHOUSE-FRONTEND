@@ -1,0 +1,53 @@
+<mat-card class="example-card">
+    <mat-card-title>Formulario de Comentarios</mat-card-title>
+    <mat-card-content>
+        <form [formGroup]="comentarioForm" class="form-container">
+
+            <mat-form-field appearance="fill">
+                <mat-label>Calificacion</mat-label>
+                <input matInput formControlName="calificacion" placeholder="Ingrese la calificacion" />
+            </mat-form-field>
+
+            <mat-form-field appearance="fill">
+                <mat-label>Tipo Usuario</mat-label>
+                <input matInput formControlName="tipoUsuario" placeholder="Ingrese tipo de usuario">
+            </mat-form-field>
+
+            <mat-form-field appearance="fill">
+                <mat-label>Fecha Comentario</mat-label>
+                <input matInput [matDatepicker]="picker" formControlName="fechaComentario"
+                       placeholder="Seleccione su fecha de Comentario" />
+                <mat-hint>DD/MM/YYYY</mat-hint>
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+
+            <mat-form-field appearance="fill">
+                <mat-label>Comentario</mat-label>
+                <input matInput formControlName="comentario" placeholder="Ingrese su comentario " />
+            </mat-form-field>
+
+            <mat-form-field appearance="fill">
+                <mat-label>Propiedad</mat-label>
+                <mat-select formControlName="propiedad" [(value)]="idPropiedadSeleccionado" required>
+                    <mat-option *ngFor="let a of listPropiedad" [value]="a.idPropiedad">
+                        {{a.estado}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+
+            <mat-form-field appearance="fill">
+                <mat-label>Usuario</mat-label>
+                <mat-select formControlName="usuario" [(value)]="idUsuarioSeleccionado" required>
+                    <mat-option *ngFor="let a of listaUsuario" [value]="a.idUsuario">
+                        {{a.nombreCompleto}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+
+
+
+            <button mat-raised-button color="primary" (click)="onSubmit()">Registrar</button>
+        </form>
+    </mat-card-content>
+</mat-card>

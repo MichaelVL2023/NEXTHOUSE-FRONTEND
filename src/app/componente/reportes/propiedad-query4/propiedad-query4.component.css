@@ -1,0 +1,50 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Asegura que el contenido ocupe toda la pantalla */
+  background-color: #f9f9f9; /* Color de fondo para toda la página */
+}
+
+.title-container {
+  text-align: center;
+  margin-bottom: 20px; /* Reduce el margen inferior */
+  margin-top: 20px; /* Reduce el margen superior */
+  padding-left: 0; /* Elimina el padding izquierdo */
+}
+
+.title h1 {
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600; /* Incrementa el grosor del texto */
+  font-size: 2.0em; /* Incrementa el tamaño de la fuente */
+  color: #333;
+}
+
+.chart-container {
+  width: 60%; /* Ajusta el ancho del contenedor del gráfico */
+  max-width: 700px; /* Define un ancho máximo para pantallas grandes */
+  margin: 0 auto; /* Centra el contenedor horizontalmente */
+  padding: 20px; /* Añade padding interno */
+  background-color: #ffffff; /* Color de fondo blanco */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra el contenido dentro del contenedor */
+}
+
+canvas {
+  max-width: 100%; /* Asegura que el lienzo no exceda el contenedor */
+  height: 400px; /* Ajusta la altura específica */
+  display: block;
+  margin: 0 auto; /* Centra el gráfico dentro del contenedor */
+}
+@media (max-width: 768px) {
+  .chart-container {
+    width: 90%; /* Ajusta el ancho para pantallas más pequeñas */
+    padding: 10px; /* Reduce el padding en pantallas más pequeñas */
+  }
+}

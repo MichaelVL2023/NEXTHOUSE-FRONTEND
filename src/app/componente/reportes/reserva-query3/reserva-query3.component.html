@@ -1,0 +1,42 @@
+<div class="reservation-viewer">
+  <h1>Consultar Reservas Disponibles</h1>
+
+  <form [formGroup]="filterForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+  <mat-form-field appearance="fill">
+    <mat-label>Fecha de inicio</mat-label>
+    <input matInput [matDatepicker]="startPicker" formControlName="startDate" />
+    <mat-datepicker-toggle matSuffix [for]="startPicker"></mat-datepicker-toggle>
+    <mat-datepicker #startPicker></mat-datepicker>
+  </mat-form-field>
+</div>
+
+<div class="form-group">
+  <mat-form-field appearance="fill">
+    <mat-label>Fecha de fin</mat-label>
+    <input matInput [matDatepicker]="endPicker" formControlName="endDate" />
+    <mat-datepicker-toggle matSuffix [for]="endPicker"></mat-datepicker-toggle>
+    <mat-datepicker #endPicker></mat-datepicker>
+  </mat-form-field>
+</div>
+
+    <button type="submit" [disabled]="isLoading">Buscar</button>
+  </form>
+
+  <div *ngIf="isLoading" class="loading">
+    <p>Cargando reservas disponibles...</p>
+  </div>
+
+  <div *ngIf="reservations.length > 0" class="results">
+    <h2>Reservas Disponibles</h2>
+    <ul>
+      <li *ngFor="let reservation of reservations">
+        <p>Estado: {{ reservation.estado }}</p>
+      </li>
+    </ul>
+  </div>
+
+  <div *ngIf="!isLoading && reservations.length === 0" class="no-results">
+    <p>No se encontraron reservas disponibles para el rango de fechas seleccionado.</p>
+  </div>
+</div>

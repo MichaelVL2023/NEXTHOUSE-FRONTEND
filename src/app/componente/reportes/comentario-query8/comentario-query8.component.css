@@ -1,0 +1,43 @@
+.title-container {
+  text-align: center;
+  margin-bottom: 20px; /* Reduce the margin-bottom */
+  margin-top: 20px; /* Reduce the margin-top */
+  padding-left: 0; /* Remove padding-left */
+}
+
+.title h1 {
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600; /* Increase font-weight */
+  font-size: 2.0em; /* Increase font-size */
+  color: #333;
+}
+
+.chart-container {
+  width: 20%;
+  /* Ajusta el ancho del contenedor del gráfico */
+  margin: 0 auto;
+  /* Centra el contenedor del gráfico */
+  padding: 20px;
+  /* Añade padding al contenedor del gráfico */
+  background-color: #f9f9f9;
+  /* Añade un color de fondo al contenedor del gráfico */
+  border-radius: 5px;
+  /* Añade bordes redondeados al contenedor del gráfico */
+}
+
+@media (max-width: 768px) {
+  .chart-container {
+    width: 90%;
+    /* Ajusta el ancho para pantallas más pequeñas */
+    padding: 10px;
+    /* Reduce el padding en pantallas más pequeñas */
+  }
+}
+
+canvas {
+  max-width: 100%; /* Asegura que el lienzo no exceda el contenedor */
+  height: 300px; /* Ajusta la altura específica */
+  display: block;
+  margin: 0 auto; /* Centra el gráfico dentro del contenedor */
+}

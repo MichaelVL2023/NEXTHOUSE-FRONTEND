@@ -1,0 +1,14 @@
+.title {
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600; /* Increase font-weight */
+  font-size: 2.0em; /* Increase font-size */
+  color: #333;
+}
+
+canvas {
+  max-width: 100%; /* Asegura que el lienzo no exceda el contenedor */
+  height: 400px; /* Ajusta la altura específica */
+  display: block;
+  margin: 0 auto; /*Centra el gráfico dentro del contenedor */
+}

@@ -1,0 +1,19 @@
+<mat-card class="example-card">
+    <mat-card-title class="custom-title">Formulario de Opción de Pago</mat-card-title>
+    <mat-card-content>
+        <form [formGroup]="opcionesPagoForm" class="form-container">
+            <mat-form-field appearance="fill" class="input-field">
+                <mat-label>Método de Pago</mat-label>
+                <input matInput formControlName="metodoPago" placeholder="Ingrese el método de pago" />
+            </mat-form-field>
+
+            <mat-form-field appearance="fill" class="input-field">
+                <mat-label>Descripción</mat-label>
+                <input matInput formControlName="descripcion" placeholder="Ingrese la descripción" />
+            </mat-form-field>
+
+            <button mat-raised-button color="primary" class="custom-button" (click)="onSubmit()">Registrar</button>
+        </form>
+    </mat-card-content>
+</mat-card>
+

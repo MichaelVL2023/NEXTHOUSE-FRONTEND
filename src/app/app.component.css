@@ -1,0 +1,183 @@
+/* Fuente personalizada */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos generales */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Roboto', Arial, sans-serif;
+    background-color: #101010;
+    color: #ffffff;
+}
+
+.main-content {
+    width: 100%;
+    max-width: 1200px;
+}
+
+/* Estilo del nav */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 25px 0;
+    background-color: #D0C08C;
+    position: relative;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+
+}
+
+/* Enlaces centrados (Home y Acerca de Nosotros) */
+nav a {
+    color: #333;
+    text-decoration: none;
+    margin: 0 20px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #967145;
+
+}
+
+/* Menú desplegable en la esquina superior izquierda */
+.dropdown {
+    position: absolute;
+    top: 15px;   /* Ajusta la distancia desde la parte superior */
+    left: 20px;  /* Ajusta la distancia desde la izquierda */
+}
+
+
+.dropdown-button {
+  background-color: #967145; /* Color de fondo del botón */
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.dropdown-button:hover {
+    background-color: #555;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #967145;
+    min-width: 200px;
+    box-shadow: 0px 4px 8px rgba(3, 3, 3, 0.2);
+    border-radius: 4px;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.dropdown-content a {
+  color: white; /* Color del texto */
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-size: 14px;
+}
+
+.dropdown-content a:hover {
+    background-color: #dacd9f;
+}
+
+/* Mostrar el contenido del menú desplegable al hacer hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Botón "Listado" en la esquina superior derecha */
+.conditional-button {
+    position: absolute;
+    top: 15px;   /* Ajusta la distancia desde la parte superior */
+    right: 20px; /* Ajusta la distancia desde la derecha */
+    background-color: #D0C08C;
+    color: black;
+    padding: 8px 16px;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 4px;
+    font-weight: 700;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.conditional-button:hover {
+    background-color: #D0C08C;
+}
+
+/* Estilo para el contenedor del dropdown */
+.dropdown1 {
+  position: absolute;
+  top: 14px;   /* Ajusta la distancia desde la parte superior */
+  left: 150px;  /* Ajusta la distancia desde la izquierda */
+}
+
+/* Estilo para el botón del dropdown */
+.dropdown-button1 {
+  background-color: #967145; /* Color de fondo del botón */
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* Contenido del dropdown, oculto por defecto */
+.dropdown-content1 {
+  display: none;
+  position: absolute;
+  background-color: #967145; /* Color de fondo del menú */
+  min-width: 200px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  z-index: 1;
+}
+
+/* Estilo para cada enlace en el dropdown */
+.dropdown-content1 a {
+  color: white; /* Color del texto */
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-size: 14px;
+}
+
+/* Mostrar el contenido del dropdown cuando el botón es presionado */
+.dropdown1:hover .dropdown-content1 {
+  display: block;
+}
+
+
+/* Cambiar el color de fondo al pasar el mouse sobre cada enlace */
+.dropdown-content1 a:hover {
+  background-color: #D0C08C;
+}
+
+
+.dropdown-button1:hover {
+    background-color: #555;
+}
+
+
+
+

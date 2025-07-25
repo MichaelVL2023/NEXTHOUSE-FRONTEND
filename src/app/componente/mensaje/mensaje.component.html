@@ -1,0 +1,35 @@
+<mat-card class="example-card">
+    <mat-card-title>Formulario de Mensaje</mat-card-title>
+    <mat-card-content>
+        <form [formGroup]="mensajeForm" class="form-container">
+            <mat-form-field appearance="fill">
+                <mat-label>Contenido</mat-label>
+                <input matInput formControlName="contenido" placeholder="Ingrese su Contenido" />
+            </mat-form-field>
+
+            <mat-form-field appearance="fill">
+                <mat-label>Fecha Envio</mat-label>
+                <input matInput [matDatepicker]="picker" formControlName="fechaEnvio"
+                       placeholder="Seleccione su fecha de envio" />
+                <mat-hint>DD/MM/YYYY</mat-hint>
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+
+            <mat-form-field appearance="fill">
+                <mat-label>Tipo</mat-label>
+                <input matInput formControlName="tipo" placeholder="Ingrese el tipo " />
+            </mat-form-field>
+
+            <mat-form-field appearance="fill">
+                <mat-label>Usuario</mat-label>
+                <mat-select formControlName="usuario" [(value)]="idUsuarioSeleccionado" required>
+                    <mat-option *ngFor="let a of lista" [value]="a.idUsuario">
+                        {{a.nombreCompleto}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+            <button mat-raised-button color="primary" (click)="onSubmit()">Registrar</button>
+        </form>
+    </mat-card-content>
+</mat-card>
