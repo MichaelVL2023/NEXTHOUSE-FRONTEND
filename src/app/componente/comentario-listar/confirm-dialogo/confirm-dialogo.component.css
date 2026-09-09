@@ -1,0 +1,35 @@
+/* Estilo para el título del diálogo */
+h2[mat-dialog-title] {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    color: #333333;
+    margin-bottom: 10px;
+}
+
+/* Estilo para el contenido del diálogo */
+mat-dialog-content {
+    font-size: 16px;
+    color: #555555;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Estilo para los botones */
+mat-dialog-actions {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+button[mat-raised-button] {
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button[mat-raised-button]:hover {
+    background-color: #1565c0;
+    color: white;
+}
